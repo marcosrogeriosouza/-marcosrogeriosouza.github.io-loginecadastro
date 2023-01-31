@@ -1,0 +1,389 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.contanier {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1600px;
+}
+
+.divanuncio h2 {
+    color: #f7f7f7;
+    margin-left: 21rem;
+    margin-top: -28rem;
+    font-size: 40px;
+    padding: 10px;
+    display: block;
+}
+.wrapper {
+    position: relative;
+    padding-top: 5px;
+    margin-left: -40rem;    
+}
+.wrapper .sign-up {
+    position: relative; 
+}
+
+.form-wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease-in-out;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+.form-wrapper.sign-up {
+    margin-left: 10rem;
+    margin-top: 1rem;
+}
+.form-wrapper.sign-in img {
+    margin-left: 5rem; 
+    display: block;
+}
+
+.form-wrapper.sign-up img {
+    margin-left: 2rem; 
+    width: 17rem; 
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-wrapper.sign-up h1 {
+     margin-bottom: 10px;
+}
+.form-wrapper h1 {
+    font-size: 30px; 
+    text-align: center; 
+    margin: 10px; 
+}
+.form-wrapper p {
+    font-size: 21px; 
+    text-align: center;
+    margin-bottom: 10px;
+    color: #183442;
+    font-family: proxima-nova,sans-serif;  
+}
+.txt {
+    border-bottom: 1px solid #365B6D;
+    text-decoration: none;
+    font-size: 23px;
+    color: #183442;
+    font-family: proxima-nova,sans-serif;
+    margin-bottom: 18px;
+}
+
+/*TRANSFORMAÇÃO LOGIN PARA CADASTRO*/
+.wrapper.active .form-wrapper.sign-in {
+    transform: scale(0) translate(-300px, 500px);  
+}
+.wrapper .form-wrapper.sign-up {
+    position: absolute;
+    top: 0;
+    transform: scale(0) translate(200px, -500px);
+}
+.wrapper.active .form-wrapper.sign-up {
+    transform: scale(1) translate(0, 0);
+}
+.acesso {
+    margin-top: 12px;
+    justify-content: center;
+}
+.div-input {
+    display: grid;
+    gap: 15px;
+    justify-content: center;
+}
+.Input-group {
+    position: relative;
+    background-color: #d5eee2;
+    border: 1px solid #365B6D;
+    border-radius: 4px;
+    width: 20rem;
+    height: 2.5rem;
+    display: flex;
+    
+}
+.Input-group label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%); 
+    font-size: 18px;
+    pointer-events: none;   
+    color: #365B6D;  
+    padding: 5px;
+    transition: .4s;
+
+}
+.Input-group label::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    border-left: 1.8px solid #183442;
+    border-bottom: 1.8px solid #183442;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: .2s;
+}
+.Input-group label::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    border-right: 1.8px solid #183442;
+    border-top: 1.8px solid #183442;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition:.2s;
+}
+.Input-group input {
+    width: 255px;
+    height: 20px;
+    padding: 15px;
+    font-size: 15px;
+    background: transparent;
+    border: 1.8px solid rgba(255,255,255,.1);
+    outline: none;
+    border-radius: 5px;
+    color: #183442;
+    padding: 10px; 
+}
+/*ANIMAÇÃO INPUT E LABEL*/
+.Input-group input:focus~label,
+.Input-group input:valid~label {
+    top: -2px;
+    left: 8px;
+    font-size: 15px;
+    padding: 0 10px; 
+    background: linear-gradient(to bottom,#fff 50%,#D5EEE2);
+    color: #183442;
+    font-weight: bold; 
+}
+.Input-group input:focus~label::before,
+.Input-group input:valid~label::before {
+    top: 5px;
+    opacity: 1;
+}
+.Input-group input:focus~label::after,
+.Input-group input:valid~label::after {
+    top: 5px;
+    opacity: 1;
+}
+.eye {    
+    padding: 10px;
+    color: rgb(0, 0, 0, 0.6); 
+    background-color: transparent;
+    border: 0;  
+    font-size: 18px;   
+} 
+#eye1 {
+    display: none;
+    color: rgb(0, 0, 0, 0.6); 
+    background-color: transparent;
+    border: 0;  
+    font-size: 18px;
+}
+.eye01 {    
+    padding: 10px;
+    color: rgb(0, 0, 0, 0.6); 
+    background-color: transparent;
+    border: 0;  
+    font-size: 18px;   
+}  
+#eye001 {
+    display: none;
+    color: rgb(0, 0, 0, 0.6); 
+    background-color: transparent;
+    border: 0;  
+    font-size: 18px;
+} 
+.btnbusca {
+    width: 20rem; 
+    height: 2.5rem;
+    background-color: #C6E542;
+    border: solid 1px rgb(2, 1, 5);  
+    border-radius: 5px;
+    font-size: 16px; 
+    font-weight: bold; 
+    transition: 1s;
+    justify-content: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.btnbusca:hover {
+    color: #f7f7f7;
+    border: solid 1px rgb(2, 1, 5);
+    background-color: #289DD2; 
+}
+.contalogin {
+    text-align: center;
+    font-family: proxima-nova,sans-serif;
+    margin-top: 5px;
+    margin-left: 60px;
+    width: 200px;
+
+}
+.contalogin p {
+    font-size: 18px;
+    color: #3f4752;   
+}
+.contalogin .sign-up a {
+    font-size: 250px;
+}
+.contalogin a {
+    color: #289dd2;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: 2s;
+    font-size: 20px;
+    cursor: pointer; 
+}
+.contalogin a:hover {
+    border-bottom: 2px solid #289DD2;
+}
+.social-platform {
+    font-size: 15px;
+    text-align: center;
+    margin-top: -10px;
+}
+.social-platform p {
+    font-size: 18px;
+    text-align: center;
+    font-family: proxima-nova,sans-serif;
+}
+.social-icons a {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border: 1px solid #183442;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+}
+.social-icons a i {
+    color: #183442;
+    transition: .3s;
+}
+.social-icons a:hover{
+    background-color:#acc5d1;
+}
+.remember {
+    margin: -5px 0px 15px 5px;
+    margin-top: -10px;  
+    color: #3f4752;
+}
+.remember label {
+    font-size: 18px;
+}
+.remember input {
+    accent-color: #289DD2;
+    margin: 5px;
+}
+
+@media (max-width: 1300px){
+    .form-wrapper.sign-in h1 {
+        font-size: 25px; 
+    }
+    .form-wrapper.sign-in p {
+        font-size: 18px; 
+    }
+    .form-wrapper.sign-in img {
+        margin-left: 40px; 
+    }
+     
+    .form-wrapper.sign-up {
+        margin-left: 15rem;
+    }
+    .wrapper {
+        margin-left: -50rem;    
+    }
+
+}
+@media (max-width: 1200px){
+    .form-wrapper.sign-up {
+        margin-left: 18rem;
+    } 
+    .wrapper {
+        margin-left: -55rem;    
+    } 
+}
+@media (max-width: 1150px) {
+    .divanuncio {
+        display: none;
+    }
+
+    body {
+        background: linear-gradient(#B9E44F,#8EDF76,#36D4C5, #0CC6F3);
+        height: 590px;
+    }
+
+    .contalogin a {
+        color: #183442; 
+    }
+    .contalogin a:hover {
+        border-bottom: 2px solid #183442;
+    }
+
+    .Input-group input:focus~label,
+    .Input-group input:valid~label{
+        background: linear-gradient(to bottom,#82DD81 70%,#D5EEE2); 
+        border-radius: 10px;
+    }
+    .Input-group input:focus~.label-email,
+    .Input-group input:valid~.label-email {
+        background: linear-gradient(to bottom,#64DA9B 70%,#D5EEE2); 
+    }
+
+    .Input-group input:focus~.label-senha,
+    .Input-group input:valid~.label-senha {
+        background: linear-gradient(to bottom,#4ED7B0 70%,#D5EEE2); 
+    }
+
+    .contanier {
+        grid-template-columns: 1fr;
+        margin-left: 30%;
+    }
+
+    .wrapper {
+        margin-left: -20rem;    
+    }
+}
+
+@media (max-width: 900px) {
+    .contanier {
+        margin-left: 10%;
+    }
+
+    .form-wrapper.sign-up {
+        margin-left: 30rem;
+    } 
+
+}
+
+@media (max-width: 700px) {
+    .contanier {
+        margin-left: auto;
+    }
+    .wrapper {
+        margin-left: -2rem;    
+    }
+    .form-wrapper.sign-up {
+        margin-left: 6rem;
+    }
+
+}

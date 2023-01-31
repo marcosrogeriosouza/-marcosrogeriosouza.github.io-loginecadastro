@@ -1,12 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="shortcut icon" href="img/icone.png" type="imagem-icone">
+    <title>Digital Apk</title>
 </head>
 <body>
-    
+    <div class="contanier">   
+    <div class="divanuncio">
+        <img src="img/body.png" alt="">
+        <h2>Dentro de alguns<br>passos poderá<br>moldar o seu<br>próprio futuro<br> financeiro</h2>
+    </div>
+    <div class="wrapper">   
+        <div class="form-wrapper sign-in">
+        <img src="img/logo sem fundo.png" alt="logo">
+        <h1>Bem-vindo! É ótimo tê-lo connosco.</h1>
+        <p>Vamos começar o seu processo de Cadastro!</p>        
+        <div class="acesso">
+        <form method="get" action="cadastroparalogin">
+            <div class="div-input">
+                <div class="Input-group">
+                                <input  type="text" required>
+                                <label for="id-user">Nome e Sobrenome</label>
+                </div>
+                <div class="Input-group">
+                                <input  type="e-mail" required>
+                                <label class="label-email" for="id-user">E-mail</label>
+                </div>
+                            
+                <div class="Input-group">
+                <input  type="password" required id="myInput">
+                <label class="label-senha" for="id-user">Senha</label>
+                <span class="eye" onclick="myFunctioneye()">
+                <i id="eye1" class="fa fa-eye"></i>
+                <i id="eye2" class="fa fa-eye-slash"></i>
+                </span>
+                </div>
+                            
+                <button class="btnbusca" type="submit">Criar Conta</button>
+                <hr>
+                <div class="contalogin">
+                <p>Já possui Cadastro?</p>
+                <a href="#" class="signupbtn-link">Acessar Conta</a>
+                </div>
+            </div>
+                        
+        </form>
+        </div> 
+        </div>
+        <div class="form-wrapper sign-up">
+        <img class="divformulario-login" src="img/logo sem fundo.png" alt="logo">
+        <h1>Bem-vindo! Faça seu Login</h1>     
+        <div class="acesso">
+            <form method="get" action="login">
+                <div class="div-input">
+                    <div class="Input-group">
+                    <input  type="e-mail" required>
+                    <label for="id-user">E-mail</label>
+                    </div>
+                <div class="Input-group">
+                <input  type="password" required id="myInput1">
+                <label for="id-user">Senha</label>
+                <span class="eye01" onclick="myFunctioneye01()">
+                <i id="eye001" class="fa fa-eye"></i>
+                <i id="eye002" class="fa fa-eye-slash"></i>
+            </span>
+        </div>
+        <div class="remember">
+        <label><input type="checkbox">Lembra</label>
+        </div>
+        <button class="btnbusca" type="submit">Acessa Conta</button>
+        <div class="contalogin">
+            <p>Não possui acesso?</p>
+            <a href="#" class="signinbtn-link">Cadastre-se</a>
+        </div>
+        <hr>
+        <div class="social-platform">
+            <p>ou entre com</p>
+            <div class="social-icons">
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://accounts.google.com/v3/signin/identifier?dsh=S571096035%3A1671728836968994&continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dgmail%2Bentrar%26oq%3Dgmail%26aqs%3Dchrome.1.69i57j0i271l2.2008j0j1%26sourceid%3Dchrome%26ie%3DUTF-8&ec=GAZAAQ&hl=pt-BR&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AeAAQh6CCCUJPrTojToo9-0ICIZVCGyz2x9p_q4bFJS-1ITZlTw2zw2SHdMnjSjDxLOsmAOgcSlMfQ"><i class="fa-brands fa-google"></i></a>
+            <a href="https://www.linkedin.com/login/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            </div>
+            </div> 
+        </form>
+        </div>   
+</div>
+</div>
+</div>
+
+<script src="script.js"></script>   
 </body>
 </html>
